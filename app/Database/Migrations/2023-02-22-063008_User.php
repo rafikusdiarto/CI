@@ -20,14 +20,12 @@ class User extends Migration
                   'constraint'     => '255',
               ],
               'email'     => [
-                   'type'           => 'TEXT'
-              ],
-              'password'     => [
-                   'type'           => 'TEXT'
-              ],
+                'type'           => 'VARCHAR',
+                'constraint'     => '255',
+            ],
         ]);
         $this->forge->addKey('id', TRUE);
-        $this->forge->createTable('user');
+        $this->forge->createTable('users');
     }
 
     public function down()
